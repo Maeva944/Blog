@@ -3,7 +3,8 @@
     --maincolor : #BA0D0D;
     --backcolor:rgb(144, 0, 0);
     --mytypo : "basicfont";
-    --typoo : "title"
+    --typoo : "title";
+    --articletype : "articletitle"
 }
 @font-face{
     font-family: "basicfont";
@@ -12,6 +13,10 @@
 @font-face {
     font-family:"title";
     src: url(../font/IndieFlower-Regular.ttf);
+}
+@font-face {
+    font-family: "articletitle";
+    src: url(../font/vogue/Vogue.ttf);
 }
 *{
     margin: 0;
@@ -23,37 +28,45 @@ header {
     flex-wrap: wrap;
     background-color: var(--maincolor);
     color: #fff;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     height: 3em;
 }
 
+header a img{
+    height: 100%;
+}
+
 header a:first-of-type{
-    margin: 0 0 0 -5%;
+    height: 100%;
+    padding-left: 5%;
 }
 header h1{
     font-size: 2em;
     font-weight: 100;
     font-family: var(--mytypo);
 }
-
-header a{
+header nav {
+    width: 30%;
+    padding-right: 5%;
+}
+header nav a{
     text-decoration: none;
     color: #fff;
-    margin: 0.5% 0 0 0;
+    margin: 0 3%;
     font-size: 1.5em;
 }
 
 section:first-of-type img{
     height: 85vh;
     width: 100%;
-
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     padding-bottom: 3%;
+    justify-content: space-evenly;
 }
 
 main h2, section:nth-child(4) h2{
@@ -73,16 +86,16 @@ main article img{
     width: 100%;
 }
 
-main button{
+main a{
     width: 8%;
     padding: 0.5% 1%;
-    margin-left: 45%;
     text-align: center;
     background-color: var(--maincolor);
     color: #fff;
     border: transparent;
     border-radius: 5px;
     font-size: 1em;
+    text-decoration: none;
 }
 section:nth-last-child(4){
     display: flex;
@@ -218,10 +231,11 @@ footer article:nth-child(2) form{
     padding: 2%;
 }
 footer article:nth-child(2) input[type = "search"]{
-    border: transparent;
+    border: none ;
     width: 90%;
     padding: 2% 0;
 }
+
 footer article:nth-child(2) input[type = "image"]{
     width: 4%;
     margin-top: 2%;
@@ -244,4 +258,64 @@ footer article:nth-child(3) a {
 
 footer article:nth-child(3) img{
     width: 100%;
+}
+
+/*css nos articles*/ 
+
+#htmlarticle {
+    margin: 0;
+    padding: 0;
+}
+#article main a{
+    width: 28%;
+    color: var(--textcolor);
+    background-color: white;
+}
+
+#article main h2{
+    padding: 2%;
+}
+
+#article main a img{
+    width: 100%;
+}
+
+/*css article1*/ 
+#article1m section{
+    width: 70%;
+    height: 40%;
+}
+#article1m img {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+} 
+
+#article main a {
+    text-align: left;
+}
+/*css article maeva*/
+
+.article1m > h1{
+    font-family: var(--articletype);
+    font-size: 30pt;
+    margin: 3%;
+    text-align: center;
+}
+.article1m section{
+    width: 70%;
+    margin: auto;
+}
+
+.article1m section h2{
+    font-family: var(--articletype);
+    font-weight: 100;
+    font-size: 20pt;
+    margin: 1% 0;
+    color: #333;
+}
+
+.article1m section p{
+    font-size: 13pt;
+    line-height: 20px;
 }
